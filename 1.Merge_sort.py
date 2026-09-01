@@ -25,6 +25,10 @@ def merge_sort(numbers):
 
 
 if __name__ == "__main__":
-    numbers = [38, 27, 43, 3, 9, 82, 10]
-    print("Original list:", numbers)
-    print("Sorted list:", merge_sort(numbers))
+    user_input = input("Enter numbers separated by spaces: ")
+    try:
+        numbers = list(map(int, user_input.split()))
+        print("Original list:", numbers)
+        print("Sorted list:", merge_sort(numbers))
+    except ValueError:
+        print("Error: Please enter valid integers separated by spaces.")
